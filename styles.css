@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  background-color: rebeccapurple;
+  cursor: pointer;
+  padding: 1.4rem 2.4rem;
+  font-size: 1.4rem;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale .5s ease-out;
+  border-radius: 50%;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
